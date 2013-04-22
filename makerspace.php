@@ -10,6 +10,8 @@ Text Domain: makerspace
 Domain Path: /languages
 */
 
+add_shortcode( 'new_directory', 'mms_directory' );
+
 function mms_directory() {
 	//get_leads($form_id, $sort_field_number=0, $sort_direction='DESC', $search='', $offset=0, $page_size=30, $star=null, $read=null, $is_numeric_sort = false, $start_date=null, $end_date=null, $status='active'){
 	$entries = RGFormsModel::get_leads( 2, '1', 'ASC', '', '0', 1000 );
